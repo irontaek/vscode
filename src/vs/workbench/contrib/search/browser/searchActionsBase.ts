@@ -144,7 +144,7 @@ export async function findInFilesCommand(accessor: ServicesAccessor, _args: IFin
 			isRegexp: args.isRegex,
 			useExcludeSettingsAndIgnoreFiles: args.useExcludeSettingsAndIgnoreFiles,
 			onlyOpenEditors: args.onlyOpenEditors,
-			showIncludesExcludes: !!(args.filesToExclude || args.filesToExclude || !args.useExcludeSettingsAndIgnoreFiles),
+			showIncludesExcludes: !!(args.filesToInclude || args.filesToExclude || !args.useExcludeSettingsAndIgnoreFiles),
 		});
 		commandService.executeCommand(SearchEditorConstants.OpenEditorCommandId, convertArgs(args));
 	}
